@@ -14,7 +14,7 @@ public class UpdatePlayer : MonoBehaviour
 	private float normalizedHorizontalSpeed = 0;
 	
 	private CharacterController2D _controller;
-	//private Animator _animator;
+	private Animator _animator;
 	private RaycastHit2D _lastControllerColliderHit;
 	private Vector3 _velocity;
 	
@@ -23,13 +23,13 @@ public class UpdatePlayer : MonoBehaviour
 	
 	void Awake()
 	{
-		//_animator = GetComponent<Animator>();
+		_animator = GetComponent<Animator>();
 		_controller = GetComponent<CharacterController2D>();
 		
 		// listen to some events for illustration purposes
 		_controller.onControllerCollidedEvent += onControllerCollider;
-		_controller.onTriggerEnterEvent += onTriggerEnterEvent;
-		_controller.onTriggerExitEvent += onTriggerExitEvent;
+		//_controller.onTriggerEnterEvent += onTriggerEnterEvent;
+		//_controller.onTriggerExitEvent += onTriggerExitEvent;
 	}
 	
 	
@@ -46,13 +46,24 @@ public class UpdatePlayer : MonoBehaviour
 	}
 	
 	
-	void onTriggerEnterEvent( Collider2D col )
+	void onTriggerEnter2D( Collider2D col )
 	{
+		
 		Debug.Log( "onTriggerEnterEvent: " + col.gameObject.name );
+		if (col.name == "Axe") {
+
+			Destroy (col.gameObject);
+
+		} else if (col.name == "Bow") {
+			
+			Destroy (col.gameObject);
+
+		}
+
 	}
 	
 	
-	void onTriggerExitEvent( Collider2D col )
+	void onTriggerExit2D( Collider2D col )
 	{
 		Debug.Log( "onTriggerExitEvent: " + col.gameObject.name );
 	}
@@ -75,8 +86,8 @@ public class UpdatePlayer : MonoBehaviour
 			if( transform.localScale.x < 0f )
 				transform.localScale = new Vector3( -transform.localScale.x, transform.localScale.y, transform.localScale.z );
 			
-			//if( _controller.isGrounded )
-				//_animator.Play( Animator.StringToHash( "Run" ) );
+			if( _controller.isGrounded )
+				_animator.Play( Animator.StringToHash( "PlayerRunning" ) );
 		}
 		else if( Input.GetKey( KeyCode.LeftArrow ) ||  Input.GetKey( KeyCode.A ) )
 		{
