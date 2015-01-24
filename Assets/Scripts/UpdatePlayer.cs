@@ -17,6 +17,7 @@ public class UpdatePlayer : MonoBehaviour
 	private Animator _animator;
 	private RaycastHit2D _lastControllerColliderHit;
 	private Vector3 _velocity;
+	private bool holdingAxe = false;
 	
 	
 	
@@ -28,8 +29,8 @@ public class UpdatePlayer : MonoBehaviour
 		
 		// listen to some events for illustration purposes
 		_controller.onControllerCollidedEvent += onControllerCollider;
-		//_controller.onTriggerEnterEvent += onTriggerEnterEvent;
-		//_controller.onTriggerExitEvent += onTriggerExitEvent;
+		_controller.onTriggerEnterEvent += onTriggerEnterEvent;
+		_controller.onTriggerExitEvent += onTriggerExitEvent;
 	}
 	
 	
@@ -46,26 +47,23 @@ public class UpdatePlayer : MonoBehaviour
 	}
 	
 	
-	void onTriggerEnter2D( Collider2D col )
+	void onTriggerEnterEvent( Collider2D col )
 	{
 		
-		Debug.Log( "onTriggerEnterEvent: " + col.gameObject.name );
+		//Debug.Log( "onTriggerEnterEvent: " + col.gameObject.name );
 		if (col.name == "Axe") {
 
 			Destroy (col.gameObject);
-
-		} else if (col.name == "Bow") {
-			
-			Destroy (col.gameObject);
+			holdingAxe = true;
 
 		}
 
 	}
 	
 	
-	void onTriggerExit2D( Collider2D col )
+	void onTriggerExitEvent( Collider2D col )
 	{
-		Debug.Log( "onTriggerExitEvent: " + col.gameObject.name );
+		//Debug.Log( "onTriggerExitEvent: " + col.gameObject.name );
 	}
 	
 	#endregion
@@ -87,7 +85,10 @@ public class UpdatePlayer : MonoBehaviour
 				transform.localScale = new Vector3( -transform.localScale.x, transform.localScale.y, transform.localScale.z );
 			
 			if( _controller.isGrounded )
+				if (!holdingAxe)
 				_animator.Play( Animator.StringToHash( "PlayerRunning" ) );
+				else
+				_animator.Play( Animator.StringToHash( "PlayerRunningWithAxe" ) );
 		}
 		else if( Input.GetKey( KeyCode.LeftArrow ) ||  Input.GetKey( KeyCode.A ) )
 		{
@@ -95,8 +96,11 @@ public class UpdatePlayer : MonoBehaviour
 			if( transform.localScale.x > 0f )
 				transform.localScale = new Vector3( -transform.localScale.x, transform.localScale.y, transform.localScale.z );
 			
-			//if( _controller.isGrounded )
-				//_animator.Play( Animator.StringToHash( "Run" ) );
+			if( _controller.isGrounded )
+				if (!holdingAxe)
+				_animator.Play( Animator.StringToHash( "PlayerRunning" ) );
+				else
+				_animator.Play( Animator.StringToHash( "PlayerRunningWithAxe" ) );
 		}
 		else
 		{
