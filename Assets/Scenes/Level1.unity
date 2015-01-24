@@ -116,7 +116,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b8422333fa9145b41b8306e312f883f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85bc1253d2f85b74abf84b54e988ab44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &200641102
 Transform:
@@ -205,8 +205,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 24, y: 24}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 24, y: 60}
+  m_Center: {x: 5, y: -20}
 --- !u!50 &200641106
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -832,6 +832,23 @@ Prefab:
     - target: {fileID: 11461292, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
       propertyPath: triggerMask.m_Bits
       value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 21261294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 85bc1253d2f85b74abf84b54e988ab44,
+        type: 3}
+    - target: {fileID: 6161294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
+      propertyPath: m_Size.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
+      propertyPath: m_Center.y
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
+      propertyPath: m_Center.x
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
