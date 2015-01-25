@@ -6,6 +6,10 @@ public class LogController : MonoBehaviour {
 	public static GameObject[] logsStatic;
 	public GameObject[] logs;
 	private static int logsLeft = 3;
+	public AudioClip soundBashLogs;
+	public AudioClip soundBreakLogs;
+	public static AudioClip soundBashLogsStatic;
+	public static AudioClip soundBreakLogsStatic;
 
 	void Awake() {
 
@@ -14,6 +18,9 @@ public class LogController : MonoBehaviour {
 		(logsStatic [2].GetComponent<Animator> ()).StopPlayback ();
 		(logsStatic [1].GetComponent<Animator> ()).StopPlayback ();
 		(logsStatic [0].GetComponent<Animator> ()).StopPlayback ();
+		soundBashLogsStatic = soundBashLogs;
+		soundBreakLogsStatic = soundBreakLogs;
+
 	}
 
 	public static void destroyLog() {
@@ -22,6 +29,7 @@ public class LogController : MonoBehaviour {
 		if (logsLeft >= 0) {
 
 			(logsStatic [logsLeft].GetComponent<Animator> ()).Play (Animator.StringToHash ("SaggingLog"));
+			UpdatePlayer._audio.PlayOneShot(soundBashLogsStatic);
 
 		}
 
@@ -36,6 +44,7 @@ public class LogController : MonoBehaviour {
 			Destroy (logsStatic [2]);
 			BearUpdate.fallDown();
 			AxeLogUpdate.activate();
+			UpdatePlayer._audio.PlayOneShot(soundBreakLogsStatic);
 
 		}
 

@@ -154,6 +154,7 @@ GameObject:
   - 95: {fileID: 122182715}
   - 61: {fileID: 122182718}
   - 50: {fileID: 122182719}
+  - 114: {fileID: 122182720}
   m_Layer: 9
   m_Name: Tree
   m_TagString: Untagged
@@ -236,6 +237,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &122182720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 122182714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6b94f788c5f6f4682b0c3f00fd90ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &200641100
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +323,6 @@ MonoBehaviour:
   inAirDamping: 5
   jumpHeight: 80
   attackTimer: 0
-  soundChopTree: {fileID: 8300000, guid: 5abe6e1aa1607404683f6a8a679ad1a6, type: 3}
   soundChop: {fileID: 8300000, guid: 491f5d10b986c934eb94d9f7bf36adbb, type: 3}
   soundDeath: {fileID: 8300000, guid: 0ff9855b10c6eaf43991b1f6e3d8a851, type: 3}
   soundWalking: {fileID: 8300000, guid: 927b86c169f5c6446bb73810d1db6cab, type: 3}
@@ -549,6 +560,8 @@ MonoBehaviour:
   - {fileID: 11059912}
   - {fileID: 1247145512}
   - {fileID: 2049593956}
+  soundBashLogs: {fileID: 8300000, guid: 0c55a966a5ae4334eb820c6e2b8f3179, type: 3}
+  soundBreakLogs: {fileID: 8300000, guid: fd39ee60b37bb1d499b3570fb88befd0, type: 3}
 --- !u!1 &264520926
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +801,7 @@ Transform:
   m_PrefabParentObject: {fileID: 433330, guid: abf6c0697a27d2e42bf5ea7a2d2fa7ab, type: 2}
   m_PrefabInternal: {fileID: 1858751210}
   m_GameObject: {fileID: 774926370}
-  m_LocalRotation: {x: 0, y: 0, z: .306360394, w: .951915622}
+  m_LocalRotation: {x: 0, y: 0, z: .157889977, w: .987456739}
   m_LocalPosition: {x: -315, y: -265, z: 0}
   m_LocalScale: {x: 1.6584996, y: 1, z: 1}
   m_Children: []
@@ -868,6 +881,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11498310, guid: 8e1d2e510372b2842abe39136c5315e5, type: 2}
+      propertyPath: soundBashLogs
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c55a966a5ae4334eb820c6e2b8f3179, type: 3}
+    - target: {fileID: 11498310, guid: 8e1d2e510372b2842abe39136c5315e5, type: 2}
+      propertyPath: soundBreakLogs
+      value: 
+      objectReference: {fileID: 8300000, guid: fd39ee60b37bb1d499b3570fb88befd0, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e1d2e510372b2842abe39136c5315e5, type: 2}
   m_RootGameObject: {fileID: 212716328}
@@ -1567,11 +1588,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 433330, guid: abf6c0697a27d2e42bf5ea7a2d2fa7ab, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .306360394
+      value: .157889977
       objectReference: {fileID: 0}
     - target: {fileID: 433330, guid: abf6c0697a27d2e42bf5ea7a2d2fa7ab, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .951915622
+      value: .987456739
       objectReference: {fileID: 0}
     - target: {fileID: 433330, guid: abf6c0697a27d2e42bf5ea7a2d2fa7ab, type: 2}
       propertyPath: m_RootOrder

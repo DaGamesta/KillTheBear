@@ -11,7 +11,6 @@ public class UpdatePlayer : MonoBehaviour
 	public float jumpHeight = 3f;
 	public int attackTimer = 0;
 
-	public AudioClip soundChopTree;
 	public AudioClip soundChop;
 	public AudioClip soundDeath;
 	public AudioClip soundWalking;
@@ -27,6 +26,7 @@ public class UpdatePlayer : MonoBehaviour
 	private Vector3 _velocity;
 	private bool holdingAxe = false;
 	private bool attacking = false;
+	private bool dead = false;
 	public GameObject theBear;
 	
 	
@@ -36,6 +36,7 @@ public class UpdatePlayer : MonoBehaviour
 		_animator = GetComponent<Animator>();
 		_controller = GetComponent<CharacterController2D>();
 		_audio = GetComponent<AudioSource> ();
+		_audio.clip = soundWalking;
 		
 		// listen to some events for illustration purposes
 		_controller.onControllerCollidedEvent += onControllerCollider;
@@ -76,17 +77,16 @@ public class UpdatePlayer : MonoBehaviour
 		}
 		if (col.name == "Bear") {
 
-			if (!BearUpdate.getFallen()) {
+			if (!BearUpdate.getFallen() && !dead) {
 
-				Destroy (this.gameObject);
+				if (_audio.isPlaying)
+					_audio.Stop();
+				_audio.PlayOneShot(soundDeath);
+				dead = true;
+				this.gameObject.transform.position = new Vector3(-3000, -3000, this.gameObject.transform.position.z);
 				BearUpdate.setMaul();
 
 			}
-
-		}
-		if (col.name == "Tree" /*&& attacking*/) {
-			
-			UpdatePlayer._audio.PlayOneShot (soundChopTree);
 
 		}
 
@@ -95,18 +95,9 @@ public class UpdatePlayer : MonoBehaviour
 	void onTriggerStayEvent( Collider2D col )
 	{
 
-		if (col.name == "Bear") {
-
-			if (BearUpdate.getFallen() && attacking) {
-				
-				BearUpdate.kill();
-				
-			}
-			
-		}
 		if (col.name == "Tree" && attacking) {
 
-			//UpdatePlayer._audio.PlayOneShot (soundChopTree);
+			TreeUpdate.shake ();
 			
 		}
 		
@@ -125,17 +116,19 @@ public class UpdatePlayer : MonoBehaviour
 	void Update()
 	{
 
-
+		if (!dead) {
 		// grab our current _velocity to use as a base for all calculations
 		_velocity = _controller.velocity;
 		
 		if( _controller.isGrounded )
 			_velocity.y = 0;
 			
-		if (Input.GetKey (KeyCode.Space) && holdingAxe) {
+		if (Input.GetKeyDown (KeyCode.Space) && holdingAxe && !attacking) {
 
 			attacking = true;
 			attackTimer = 30;
+			if (!dead)
+				_audio.PlayOneShot(soundChop);
 
 		}
 
@@ -152,6 +145,10 @@ public class UpdatePlayer : MonoBehaviour
 					_animator.Play( Animator.StringToHash( "PlayerRunning" ) );
 					else
 					_animator.Play( Animator.StringToHash( "PlayerRunningWithAxe" ) );
+
+				if (!_audio.isPlaying)
+					_audio.Play ();
+
 			}
 			else if( Input.GetKey( KeyCode.LeftArrow ) ||  Input.GetKey( KeyCode.A ) )
 			{
@@ -164,6 +161,10 @@ public class UpdatePlayer : MonoBehaviour
 					_animator.Play( Animator.StringToHash( "PlayerRunning" ) );
 					else
 					_animator.Play( Animator.StringToHash( "PlayerRunningWithAxe" ) );
+
+				if (!_audio.isPlaying)
+					_audio.Play ();
+
 			}
 			else
 			{
@@ -174,6 +175,10 @@ public class UpdatePlayer : MonoBehaviour
 					_animator.Play( Animator.StringToHash( "PlayerIdle" ) );
 					else
 					_animator.Play( Animator.StringToHash( "PlayerIdleAxe" ) );
+
+				if (_audio.isPlaying)
+					_audio.Stop ();
+
 			}
 
 		} else {
@@ -182,6 +187,8 @@ public class UpdatePlayer : MonoBehaviour
 			attackTimer--;
 			if (attackTimer <= 0)
 				attacking = false;
+			if (_audio.isPlaying)
+				_audio.Stop();
 
 		}
 
@@ -202,6 +209,8 @@ public class UpdatePlayer : MonoBehaviour
 		_velocity.y += gravity * Time.deltaTime;
 		
 		_controller.move( _velocity * Time.deltaTime );
+
+		}
 	}
 	
 }
