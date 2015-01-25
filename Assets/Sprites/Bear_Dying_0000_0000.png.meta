@@ -1,0 +1,652 @@
+fileFormatVersion: 2
+guid: f67a63d1011d17940b7ffc5b5a939cfa
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Bear_Dying_0000_0000_0
+    21300002: Bear_Dying_0000_0000_1
+    21300004: Bear_Dying_0000_0000_2
+    21300006: Bear_Dying_0000_0000_3
+    21300008: Bear_Dying_0000_0000_4
+    21300010: Bear_Dying_0000_0000_5
+    21300012: Bear_Dying_0000_0000_6
+    21300014: Bear_Dying_0000_0000_7
+    21300016: Bear_Dying_0000_0000_8
+    21300018: Bear_Dying_0000_0000_9
+    21300020: Bear_Dying_0000_0000_10
+    21300022: Bear_Dying_0000_0000_11
+    21300024: Bear_Dying_0000_0000_12
+    21300026: Bear_Dying_0000_0000_13
+    21300028: Bear_Dying_0000_0000_14
+    21300030: Bear_Dying_0000_0000_15
+    21300032: Bear_Dying_0000_0000_16
+    21300034: Bear_Dying_0000_0000_17
+    21300036: Bear_Dying_0000_0000_18
+    21300038: Bear_Dying_0000_0000_19
+    21300040: Bear_Dying_0000_0000_20
+    21300042: Bear_Dying_0000_0000_21
+    21300044: Bear_Dying_0000_0000_22
+    21300046: Bear_Dying_0000_0000_23
+    21300048: Bear_Dying_0000_0000_24
+    21300050: Bear_Dying_0000_0000_25
+    21300052: Bear_Dying_0000_0000_26
+    21300054: Bear_Dying_0000_0000_27
+    21300056: Bear_Dying_0000_0000_28
+    21300058: Bear_Dying_0000_0000_29
+    21300060: Bear_Dying_0000_0000_30
+    21300062: Bear_Dying_0000_0000_31
+    21300064: Bear_Dying_0000_0000_32
+    21300066: Bear_Dying_0000_0000_33
+    21300068: Bear_Dying_0000_0000_34
+    21300070: Bear_Dying_0000_0000_35
+    21300072: Bear_Dying_0000_0000_36
+    21300074: Bear_Dying_0000_0000_37
+    21300076: Bear_Dying_0000_0000_38
+    21300078: Bear_Dying_0000_0000_39
+    21300080: Bear_Dying_0000_0000_40
+    21300082: Bear_Dying_0000_0000_41
+    21300084: Bear_Dying_0000_0000_42
+    21300086: Bear_Dying_0000_0000_43
+    21300088: Bear_Dying_0000_0000_44
+    21300090: Bear_Dying_0000_0000_45
+    21300092: Bear_Dying_0000_0000_46
+    21300094: Bear_Dying_0000_0000_47
+    21300096: Bear_Dying_0000_0000_48
+    21300098: Bear_Dying_0000_0000_49
+    21300100: Bear_Dying_0000_0000_50
+    21300102: Bear_Dying_0000_0000_51
+    21300104: Bear_Dying_0000_0000_52
+    21300106: Bear_Dying_0000_0000_53
+    21300108: Bear_Dying_0000_0000_54
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Bear_Dying_0000_0000_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_1
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 3450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_2
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 3450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_3
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 3450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_4
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_5
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 3450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_6
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 3450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_8
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 3050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_9
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 3050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_10
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 3050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_11
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_12
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 3050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_13
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 3050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_15
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 2650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_16
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 2650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_17
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 2650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_18
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_19
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 2650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_20
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 2650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2250
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_22
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 2250
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_23
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 2250
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_24
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 2250
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_25
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2250
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_26
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 2250
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_27
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 2250
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1850
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_29
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1850
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_30
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1850
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_31
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1850
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_32
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1850
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_33
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 1850
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_34
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 1850
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_36
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_37
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_38
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_39
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_40
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 1450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_41
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 1450
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_43
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_44
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_45
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_46
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_47
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 1050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_48
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 1050
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_50
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_51
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_52
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_53
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bear_Dying_0000_0000_54
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 650
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
