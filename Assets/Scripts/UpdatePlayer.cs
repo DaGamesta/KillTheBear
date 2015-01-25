@@ -73,6 +73,7 @@ public class UpdatePlayer : MonoBehaviour
 		if (col.name == "TrapFront") {
 
 			LogController.destroyLog();
+			Debug.Log ("This is a change I made!");
 			
 		}
 		if (col.name == "Bear") {
