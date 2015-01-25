@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\BearUpdate.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\LogController.cs" />
+     <Compile Include="Assets\Scripts\StartScrean.cs" />
      <Compile Include="Assets\Scripts\TreeUpdate.cs" />
      <Compile Include="Assets\Scripts\UpdatePlayer.cs" />
  <Reference Include="UnityEngine.UI">
