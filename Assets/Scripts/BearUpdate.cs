@@ -5,6 +5,13 @@ public class BearUpdate : MonoBehaviour {
 
 	public static GameObject localBear;
 	public float speed = 20, patrolArea = 400;
+
+	public AudioClip soundBearGrowling;
+	public AudioClip soundBear;
+	public AudioClip soundBearBite;
+
+	public static AudioSource _audio;
+
 	private Animator _animator;
 	private bool moveLeft = true;
 	private static bool maul = false, end = false;
@@ -49,6 +56,7 @@ public class BearUpdate : MonoBehaviour {
 	void Awake () {
 		
 		_animator = GetComponent<Animator>();
+		_audio = GetComponent<AudioSource>();
 		startX = this.transform.position.x;
 		startY = this.transform.position.y;
 		localBear = this.gameObject;
@@ -66,8 +74,12 @@ public class BearUpdate : MonoBehaviour {
 
 			if (!maul && !fallenDown) {
 
-				if (player.transform.position.y < -200)
+				if (player.transform.position.y < -200 && !angry){
+				
 					angry = true;
+					UpdatePlayer._audio.PlayOneShot (soundBearGrowling);
+					}
+
 				if (!angry) {
 
 					if (moveLeft) {
@@ -131,6 +143,11 @@ public class BearUpdate : MonoBehaviour {
 				} else if (end) {
 
 					endTimer--;
+					if (endTimer == 30) {
+						
+						UpdatePlayer._audio.PlayOneShot (soundBearBite);
+						
+					}
 					if (endTimer <= 0) {
 
 						Application.LoadLevel("Level1");
@@ -142,6 +159,8 @@ public class BearUpdate : MonoBehaviour {
 			} else if (fallenDown) {
 
 				_animator.Play (Animator.StringToHash ("BearClimbing"));
+				if(!_audio.isPlaying)
+					_audio.Play();
 
 			}
 

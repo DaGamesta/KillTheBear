@@ -562,6 +562,7 @@ GameObject:
   - 114: {fileID: 264520928}
   - 50: {fileID: 264520931}
   - 61: {fileID: 264520932}
+  - 82: {fileID: 264520933}
   m_Layer: 9
   m_Name: Bear
   m_TagString: Untagged
@@ -597,6 +598,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   patrolArea: 800
+  soundBearGrowling: {fileID: 8300000, guid: 1cd202f4b3ad2ed48ab68de62aca2f22, type: 3}
+  soundBear: {fileID: 8300000, guid: a4cfc1169ed5a9149bae44d130cb3a19, type: 3}
+  soundBearBite: {fileID: 8300000, guid: 60620ff38201dba4ca13b2f8daecd35a, type: 3}
   player: {fileID: 200641100}
 --- !u!212 &264520929
 SpriteRenderer:
@@ -659,6 +663,64 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 200, y: 500}
   m_Center: {x: 0, y: 0}
+--- !u!82 &264520933
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264520926}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: a4cfc1169ed5a9149bae44d130cb3a19, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &317453539
 Prefab:
   m_ObjectHideFlags: 0
