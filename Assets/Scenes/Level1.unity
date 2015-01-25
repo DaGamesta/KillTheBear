@@ -125,7 +125,7 @@ Transform:
   m_PrefabInternal: {fileID: 2041342537}
   m_GameObject: {fileID: 200641100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -517, y: 9, z: 0}
+  m_LocalPosition: {x: -543, y: -9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -142,11 +142,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d66da14417f28459787e3a617707e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: -1000
-  runSpeed: 500
+  gravity: -2000
+  runSpeed: 300
   groundDamping: 20
   inAirDamping: 5
-  jumpHeight: 150
+  jumpHeight: 80
 --- !u!114 &200641104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 50
+  m_GravityScale: 300
   m_FixedAngle: 0
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -381,7 +381,7 @@ Prefab:
     - target: {fileID: 21292564, guid: 2f0d09f5d4081c5469b202557e66f0e4, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: de34db86be5977444943400985df8cd3,
+      objectReference: {fileID: 21300000, guid: 7cca28f5634888746a115f38189c8c87,
         type: 3}
     - target: {fileID: 21292564, guid: 2f0d09f5d4081c5469b202557e66f0e4, type: 2}
       propertyPath: m_SortingOrder
@@ -485,11 +485,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 489082, guid: 8a249badb726cc24fb29429d617de3f0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -552
+      value: 301
       objectReference: {fileID: 0}
     - target: {fileID: 489082, guid: 8a249badb726cc24fb29429d617de3f0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -286
+      value: -153
       objectReference: {fileID: 0}
     - target: {fileID: 489082, guid: 8a249badb726cc24fb29429d617de3f0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -519,6 +519,11 @@ Prefab:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 21289082, guid: 8a249badb726cc24fb29429d617de3f0, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dc578bf679ca3824aa24b064ae1ebdc6,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a249badb726cc24fb29429d617de3f0, type: 2}
   m_RootGameObject: {fileID: 1304384012}
@@ -575,7 +580,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e0f3705a7576cca4b88a8505b7ba7f51, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc578bf679ca3824aa24b064ae1ebdc6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1304384015
 Transform:
@@ -584,7 +589,7 @@ Transform:
   m_PrefabInternal: {fileID: 1156121915}
   m_GameObject: {fileID: 1304384012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -552, y: -286, z: 0}
+  m_LocalPosition: {x: 301, y: -153, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -822,7 +827,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: -100
-  m_Sprite: {fileID: 21300000, guid: de34db86be5977444943400985df8cd3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7cca28f5634888746a115f38189c8c87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1781164081
 Transform:
@@ -845,11 +850,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 461294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -517
+      value: -543
       objectReference: {fileID: 0}
     - target: {fileID: 461294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 9
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 461294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -877,11 +882,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11461294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
       propertyPath: jumpHeight
-      value: 150
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 11461294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
       propertyPath: runSpeed
-      value: 500
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6161294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
       propertyPath: m_IsTrigger
@@ -907,6 +912,18 @@ Prefab:
     - target: {fileID: 6161294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
       propertyPath: m_Center.x
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
+      propertyPath: m_GravityScale
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
+      propertyPath: inAirDamping
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461294, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
+      propertyPath: gravity
+      value: -2000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1a0e4a46b070ed40b5aba932d45694e, type: 2}
