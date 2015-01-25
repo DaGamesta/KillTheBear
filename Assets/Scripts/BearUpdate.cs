@@ -21,6 +21,7 @@ public class BearUpdate : MonoBehaviour {
 	private static bool dead = false;
 	private bool angry = false;
 	public GameObject player;
+	private static int stuckTimer = 300;
 
 	public static void setMaul() {
 
@@ -31,7 +32,11 @@ public class BearUpdate : MonoBehaviour {
 
 	public static void fallDown() {
 
-		fallenDown = true;
+		if (stuckTimer > 0) {
+
+			fallenDown = true;
+
+		}
 
 	}
 
@@ -40,7 +45,7 @@ public class BearUpdate : MonoBehaviour {
 		if (!dead) {
 
 			dead = true;
-			localBear.transform.position = new Vector3 (localBear.transform.position.y + 50, localBear.transform.position.x, localBear.transform.position.z);
+			localBear.transform.position = new Vector3 (localBear.transform.position.x, localBear.transform.position.y + 50, localBear.transform.position.z);
 
 		}
 
@@ -64,6 +69,7 @@ public class BearUpdate : MonoBehaviour {
 		fallenDown = false;
 		dead = false;
 		end = false;
+		stuckTimer = 300;
 
 	}
 	
@@ -161,6 +167,13 @@ public class BearUpdate : MonoBehaviour {
 				_animator.Play (Animator.StringToHash ("BearClimbing"));
 				if(!_audio.isPlaying)
 					_audio.Play();
+				stuckTimer--;
+				if (stuckTimer <= 0) {
+					
+					fallenDown = false;
+					_animator.Play (Animator.StringToHash("BearWalking"));
+					
+				}
 
 			}
 

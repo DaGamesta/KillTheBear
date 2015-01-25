@@ -5,11 +5,14 @@ public class TreeUpdate : MonoBehaviour {
 
 	public static GameObject localTree;
 	private static int shakeTimer = 0;
+	private static int hp = 3;
 
 	// Use this for initialization
 	void Awake () {
 
 		localTree = this.gameObject;
+		shakeTimer = 0;
+		hp = 3;
 
 	}
 	
@@ -29,6 +32,12 @@ public class TreeUpdate : MonoBehaviour {
 			localTree.GetComponent<Animator> ().Play (Animator.StringToHash ("TreeNothing"));
 			localTree.GetComponent<Animator> ().Play (Animator.StringToHash ("TreeShake"), 0, 0);
 			shakeTimer = 35;
+			hp--;
+
+		}
+		if (hp == 0) {
+
+			BeeUpdate.swarm();
 
 		}
 
