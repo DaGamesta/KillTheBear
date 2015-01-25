@@ -11,6 +11,11 @@ public class UpdatePlayer : MonoBehaviour
 	public float jumpHeight = 3f;
 	public int attackTimer = 0;
 
+	public AudioClip soundChopTree;
+	public AudioClip soundChop;
+	public AudioClip soundDeath;
+	public AudioClip soundWalking;
+
 	public static AudioSource _audio;
 	
 	[HideInInspector]
@@ -36,6 +41,8 @@ public class UpdatePlayer : MonoBehaviour
 		_controller.onControllerCollidedEvent += onControllerCollider;
 		_controller.onTriggerEnterEvent += onTriggerEnterEvent;
 		_controller.onTriggerExitEvent += onTriggerExitEvent;
+		_controller.onTriggerStayEvent += onTriggerStayEvent;
+
 	}
 	
 	
@@ -54,7 +61,7 @@ public class UpdatePlayer : MonoBehaviour
 	
 	void onTriggerEnterEvent( Collider2D col )
 	{
-		
+
 		Debug.Log( "onTriggerEnterEvent: " + col.gameObject.name );
 		if (col.name == "Axe") {
 
@@ -74,14 +81,35 @@ public class UpdatePlayer : MonoBehaviour
 				Destroy (this.gameObject);
 				BearUpdate.setMaul();
 
-			} else if (attacking) {
-
-				BearUpdate.kill();
-
 			}
 
 		}
+		if (col.name == "Tree" /*&& attacking*/) {
+			
+			UpdatePlayer._audio.PlayOneShot (soundChopTree);
 
+		}
+
+	}
+
+	void onTriggerStayEvent( Collider2D col )
+	{
+
+		if (col.name == "Bear") {
+
+			if (BearUpdate.getFallen() && attacking) {
+				
+				BearUpdate.kill();
+				
+			}
+			
+		}
+		if (col.name == "Tree" && attacking) {
+
+			//UpdatePlayer._audio.PlayOneShot (soundChopTree);
+			
+		}
+		
 	}
 	
 	
@@ -96,6 +124,8 @@ public class UpdatePlayer : MonoBehaviour
 	// the Update loop contains a very simple example of moving the character around and controlling the animation
 	void Update()
 	{
+
+
 		// grab our current _velocity to use as a base for all calculations
 		_velocity = _controller.velocity;
 		
@@ -152,12 +182,6 @@ public class UpdatePlayer : MonoBehaviour
 			attackTimer--;
 			if (attackTimer <= 0)
 				attacking = false;
-
-		}
-
-		if (attacking && Mathf.Abs (this.transform.position.x - theBear.transform.position.x) < 50 && BearUpdate.getFallen ()) {
-
-			BearUpdate.kill ();
 
 		}
 
