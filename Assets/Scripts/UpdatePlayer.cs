@@ -77,7 +77,7 @@ public class UpdatePlayer : MonoBehaviour
 		
 		if( _controller.isGrounded )
 			_velocity.y = 0;
-		
+			
 		if( Input.GetKey( KeyCode.RightArrow ) ||  Input.GetKey( KeyCode.D ))
 		{
 			normalizedHorizontalSpeed = 1;
@@ -106,9 +106,13 @@ public class UpdatePlayer : MonoBehaviour
 		{
 			normalizedHorizontalSpeed = 0;
 			
-			//if( _controller.isGrounded )
-				//_animator.Play( Animator.StringToHash( "Idle" ) );
+			if( _controller.isGrounded )
+				if(!holdingAxe)
+				_animator.Play( Animator.StringToHash( "PlayerIdle" ) );
+				else
+				_animator.Play( Animator.StringToHash( "PlayerIdleAxe" ) );
 		}
+
 		
 		
 		// we can only jump whilst grounded
