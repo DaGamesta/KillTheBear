@@ -11,7 +11,7 @@ public class UpdatePlayer : MonoBehaviour
 	public float jumpHeight = 3f;
 	public int attackTimer = 0;
 
-	public static AudioSource;
+	public static AudioSource _audio;
 	
 	[HideInInspector]
 	private float normalizedHorizontalSpeed = 0;
@@ -30,6 +30,7 @@ public class UpdatePlayer : MonoBehaviour
 	{
 		_animator = GetComponent<Animator>();
 		_controller = GetComponent<CharacterController2D>();
+		_audio = GetComponent<AudioSource> ();
 		
 		// listen to some events for illustration purposes
 		_controller.onControllerCollidedEvent += onControllerCollider;
