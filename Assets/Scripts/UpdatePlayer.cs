@@ -10,6 +10,8 @@ public class UpdatePlayer : MonoBehaviour
 	public float inAirDamping = 5f;
 	public float jumpHeight = 3f;
 	public int attackTimer = 0;
+
+	public static AudioSource;
 	
 	[HideInInspector]
 	private float normalizedHorizontalSpeed = 0;
