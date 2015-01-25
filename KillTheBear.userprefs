@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UpdatePlayer.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LogController.cs">
     <Files>
-      <File FileName="Assets\Scripts\UpdatePlayer.cs" Line="90" Column="9" />
+      <File FileName="Assets\Scripts\LogController.cs" Line="13" Column="16" />
+      <File FileName="Assets\Scripts\UpdatePlayer.cs" Line="67" Column="28" />
+      <File FileName="Assets\Scripts\BearUpdate.cs" Line="29" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

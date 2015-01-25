@@ -9,6 +9,7 @@ public class UpdatePlayer : MonoBehaviour
 	public float groundDamping = 20f; // how fast do we change direction? higher means faster
 	public float inAirDamping = 5f;
 	public float jumpHeight = 3f;
+	public int attackTimer = 0;
 	
 	[HideInInspector]
 	private float normalizedHorizontalSpeed = 0;
@@ -18,7 +19,8 @@ public class UpdatePlayer : MonoBehaviour
 	private RaycastHit2D _lastControllerColliderHit;
 	private Vector3 _velocity;
 	private bool holdingAxe = false;
-	
+	private bool attacking = false;
+	public GameObject theBear;
 	
 	
 	
@@ -50,11 +52,30 @@ public class UpdatePlayer : MonoBehaviour
 	void onTriggerEnterEvent( Collider2D col )
 	{
 		
-		//Debug.Log( "onTriggerEnterEvent: " + col.gameObject.name );
+		Debug.Log( "onTriggerEnterEvent: " + col.gameObject.name );
 		if (col.name == "Axe") {
 
 			Destroy (col.gameObject);
 			holdingAxe = true;
+
+		}
+		if (col.name == "TrapFront") {
+
+			LogController.destroyLog();
+			
+		}
+		if (col.name == "Bear") {
+
+			if (!BearUpdate.getFallen()) {
+
+				Destroy (this.gameObject);
+				BearUpdate.setMaul();
+
+			} else if (attacking) {
+
+				BearUpdate.kill();
+
+			}
 
 		}
 
@@ -78,44 +99,67 @@ public class UpdatePlayer : MonoBehaviour
 		if( _controller.isGrounded )
 			_velocity.y = 0;
 			
-		if( Input.GetKey( KeyCode.RightArrow ) ||  Input.GetKey( KeyCode.D ))
-		{
-			normalizedHorizontalSpeed = 1;
-			if( transform.localScale.x < 0f )
-				transform.localScale = new Vector3( -transform.localScale.x, transform.localScale.y, transform.localScale.z );
-			
-			if( _controller.isGrounded )
-				if (!holdingAxe)
-				_animator.Play( Animator.StringToHash( "PlayerRunning" ) );
-				else
-				_animator.Play( Animator.StringToHash( "PlayerRunningWithAxe" ) );
-		}
-		else if( Input.GetKey( KeyCode.LeftArrow ) ||  Input.GetKey( KeyCode.A ) )
-		{
-			normalizedHorizontalSpeed = -1;
-			if( transform.localScale.x > 0f )
-				transform.localScale = new Vector3( -transform.localScale.x, transform.localScale.y, transform.localScale.z );
-			
-			if( _controller.isGrounded )
-				if (!holdingAxe)
-				_animator.Play( Animator.StringToHash( "PlayerRunning" ) );
-				else
-				_animator.Play( Animator.StringToHash( "PlayerRunningWithAxe" ) );
-		}
-		else
-		{
-			normalizedHorizontalSpeed = 0;
-			
-			if( _controller.isGrounded )
-				if(!holdingAxe)
-				_animator.Play( Animator.StringToHash( "PlayerIdle" ) );
-				else
-				_animator.Play( Animator.StringToHash( "PlayerIdleAxe" ) );
+		if (Input.GetKey (KeyCode.Space) && holdingAxe) {
+
+			attacking = true;
+			attackTimer = 30;
+
 		}
 
-		
-		
+		if (!attacking) {
+
+			if( Input.GetKey( KeyCode.RightArrow ) ||  Input.GetKey( KeyCode.D ))
+			{
+				normalizedHorizontalSpeed = 1;
+				if( transform.localScale.x < 0f )
+					transform.localScale = new Vector3( -transform.localScale.x, transform.localScale.y, transform.localScale.z );
+				
+				if( _controller.isGrounded )
+					if (!holdingAxe)
+					_animator.Play( Animator.StringToHash( "PlayerRunning" ) );
+					else
+					_animator.Play( Animator.StringToHash( "PlayerRunningWithAxe" ) );
+			}
+			else if( Input.GetKey( KeyCode.LeftArrow ) ||  Input.GetKey( KeyCode.A ) )
+			{
+				normalizedHorizontalSpeed = -1;
+				if( transform.localScale.x > 0f )
+					transform.localScale = new Vector3( -transform.localScale.x, transform.localScale.y, transform.localScale.z );
+				
+				if( _controller.isGrounded )
+					if (!holdingAxe)
+					_animator.Play( Animator.StringToHash( "PlayerRunning" ) );
+					else
+					_animator.Play( Animator.StringToHash( "PlayerRunningWithAxe" ) );
+			}
+			else
+			{
+				normalizedHorizontalSpeed = 0;
+				
+				if( _controller.isGrounded )
+					if(!holdingAxe)
+					_animator.Play( Animator.StringToHash( "PlayerIdle" ) );
+					else
+					_animator.Play( Animator.StringToHash( "PlayerIdleAxe" ) );
+			}
+
+		} else {
+
+			_animator.Play ( Animator.StringToHash("PlayerAttacking"));
+			attackTimer--;
+			if (attackTimer <= 0)
+				attacking = false;
+
+		}
+
+		if (attacking && Mathf.Abs (this.transform.position.x - theBear.transform.position.x) < 50 && BearUpdate.getFallen ()) {
+
+			BearUpdate.kill ();
+
+		}
+
 		// we can only jump whilst grounded
+		if (!attacking)
 		if( _controller.isGrounded && (Input.GetKeyDown( KeyCode.UpArrow ) ||  Input.GetKey( KeyCode.W )) )
 		{
 			_velocity.y = Mathf.Sqrt( 2f * jumpHeight * -gravity );
